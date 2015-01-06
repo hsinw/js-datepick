@@ -1,0 +1,37 @@
+<!DOCYTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../lib/bootstrap.min.css">
+        <script src="../lib/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="../timepicker.css">
+        <script src="../timepicker.js"></script>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>1. input timestamp in millisecond, click enter to check the datetime</li>
+                <li>2. click input to trigger widget, click set-button to get datetime timestamp in milliseconds</li>
+        </div>
+        <input id="test">
+
+        <script type="text/javascript">
+            $("#test").timepicker({
+                target_parent: $('body'),
+                init_value_fn: function(ele){
+                    var v = parseInt(ele.val(), 10);
+                    if(!v) return new Date();
+                    return new Date(v);
+                },
+                callback: function(ele, d){
+                    ele.val(d.valueOf());
+                },
+                pos_fix_fn: function(ele, pos){
+                    var p = ele.offset();
+                    pos.x = p['left'];
+                    pos.y = p['top'] + ele.height() + 10;
+                    return pos;
+                }
+            });
+        </script>
+    </body>
+</html>

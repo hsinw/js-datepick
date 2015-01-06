@@ -1,3 +1,13 @@
+/*
+ *jQuery UI datetime picker
+ *
+ *author: hs
+ *
+ *Depends:
+ *      jquery-1.11.1
+ *      bootstrap.css
+*/
+
 (function($){
  $.fn.timepicker = function(options){
     var defaults = {

@@ -1,0 +1,47 @@
+.timepicker{
+    background-color: white;
+    position: absolute;
+    z-index: 1002;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.timepicker tr.tp-name td{
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.timepicker input, .timepicker select{
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 2px;
+    font-weight: bold;
+}
+
+.timepicker .tp-set:hover{
+    background-color: #aaa;
+    border-color: #ddd;
+
+}
+
+.timepicker td{
+    padding: 3px;
+}
+
+.timepicker .em2{
+    width: 3em;
+}
+.timepicker .em4{
+    width: 5em;
+}
+
+.timepicker .tp-space{
+    padding: 5px;
+}
+
+.timepicker .tp-year, .timepicker .tp-mon, .timepicker .tp-day{
+    color: rgb(92, 143, 106);
+}
